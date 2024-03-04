@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 36px;
+  color: #030712;
+}
+
+nav {
+  background: #fff;
+}
+nav ul li :hover a {
+  color: #1DD100 !important;
+}
+nav ul li a {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  color: #030712 !important;
+  transition: 0.4s;
+}
+nav .bus_logo {
+  max-width: 24px;
+  width: 100%;
+  max-height: 24px;
+  height: 100%;
+}
+
+.navbtn {
+  color: #1DD100;
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: 10px;
+  border: 1px solid #1DD100;
+  padding: 16px 30px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#benner .bennere_img {
+  margin-top: 30px;
+  max-width: 1170px;
+  width: 100%;
+  height: 95vh;
+  background-image: url("./image/banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 25px;
+  margin: auto;
+}
+#benner .benner_text {
+  padding-top: 70px;
+}
+#benner .benner_text .benner_headding {
+  max-width: 740px;
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 86px;
+  color: #FFFFFF;
+  text-align: center;
+}
+#benner .benner_text .phead {
+  color: #1DD100;
+}
+#benner .benner_text .benner_info {
+  max-width: 690px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #FFFFFF;
+  text-align: center;
+}
+#benner .benner_text .buyBtn {
+  margin-top: 30px;
+  color: #030712;
+  background-color: #1DD100;
+  box-shadow: none;
+  border-radius: 10px;
+  border: 1px solid #1DD100;
+  padding: 16px 30px;
+  font-size: 20px;
+  font-weight: 700;
+}
+#benner .user_box .user_cardBox .user_card {
+  padding: 32px;
+}
+#benner .user_box .user_cardBox .user_card .user_img {
+  max-width: 64px;
+  max-height: 64px;
+}
+
+.user_info .card_Num {
+  font-family: "Inter", sans-serif !important;
+  font-size: 36px;
+  font-weight: 700;
+  color: #030712;
+}/*# sourceMappingURL=style.css.map */

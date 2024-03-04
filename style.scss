@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+@mixin btn($color,$bgColor,$bxshadaw,$font_wet){
+    color: $color ;
+    background-color: $bgColor;
+    box-shadow: $bxshadaw;
+    border-radius: 10px;
+    border: 1px solid #1DD100;
+    padding: 16px 30px;
+    font-size: 20px;
+    font-weight: $font_wet;
+
+}
+body{
+    font-family: "Raleway", sans-serif;
+}
+// ==============here i will design the nvaber section ==============
+.logo{
+    font-weight: 700;
+    font-size: 36px;
+    color: #030712;
+}
+nav{
+
+  background: #fff;
+  ul{
+    li{
+      :hover a{
+        color: #1DD100 !important;
+      }
+        a{
+            font-size: 18px !important;
+            font-weight: 500 !important;
+            color: #030712 !important;
+            transition: 0.4s;
+        }
+        
+    }
+  }
+  .bus_logo{
+    max-width: 24px;
+    width: 100%;
+    max-height: 24px;
+    height: 100%;
+  }
+}
+.navbtn{
+ @include btn(#1DD100,transparent ,none,700 )
+ 
+}
+// =============here i will design the bennere section and text============
+#benner{
+  .bennere_img{
+    margin-top: 30px;
+    max-width: 1170px;
+    width: 100%;
+    height: 95vh;
+    background-image: url('./image/banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    margin: auto;
+  }
+  .benner_text{
+    padding-top: 70px;
+    .benner_headding{
+      max-width: 740px;
+      font-size: 64px;
+      font-weight: 900;
+      line-height: 86px;
+      color:#FFFFFF ;
+      text-align: center;
+    }
+    .phead{
+      
+      color: #1DD100;
+    }
+    .benner_info{
+      max-width: 690px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 30px;
+      color: #FFFFFF;
+      text-align: center;
+    }
+    .buyBtn{
+      margin-top: 30px;
+      @include btn(#030712,#1DD100 ,none ,700 )
+    }
+  }
+  .user_box{
+
+    .user_cardBox{
+
+      .user_card{
+        padding: 32px;
+        .user_img{
+          max-width: 64px;
+          max-height: 64px;
+        }
+        
+
+
+      }
+    }
+  }
+}
+.user_info{
+  .card_Num{
+    font-family: "Inter", sans-serif !important;
+    font-size: 36px;
+    font-weight: 700;
+    color: #030712;
+  }
+  .user_title{
+    
+  }
+}
