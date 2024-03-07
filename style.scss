@@ -1,8 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@mixin Rbtn($color,$bgColor,$bxshadaw,$font_wet){
+  color: $color ;
+  background-color: $bgColor;
+  box-shadow: $bxshadaw;
+  border-radius: 10px;
+  border: 1px solid #1DD100;
+  padding: 10px 18px;
+  font-size: 16px;
+  font-weight: $font_wet;
 
+}
 @mixin btn($color,$bgColor,$bxshadaw,$font_wet){
     color: $color ;
     background-color: $bgColor;
@@ -14,9 +28,7 @@
     font-weight: $font_wet;
 
 }
-body{
-    font-family: "Raleway", sans-serif;
-}
+
 // ==============here i will design the nvaber section ==============
 .logo{
     font-weight: 700;
@@ -24,6 +36,7 @@ body{
     color: #030712;
 }
 nav{
+  font-family: "Raleway", sans-serif;
 
   background: #fff;
   ul{
@@ -52,70 +65,180 @@ nav{
  
 }
 // =============here i will design the bennere section and text============
-#benner{
-  .bennere_img{
-    margin-top: 30px;
-    max-width: 1170px;
-    width: 100%;
-    height: 95vh;
-    background-image: url('./image/banner.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 25px;
-    margin: auto;
+#benner .bennere_img{
+  margin-top: 30px;
+  max-width: 1170px;
+  width: 100%;
+  height: 100vh;
+  background-image: url('./image/banner.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 25px;
+  margin: auto;
+}
+#benner .benner_text{
+  padding-top: 70px;
+  .benner_headding{
+    color:#FFFFFF ;
+    text-align: center;
   }
-  .benner_text{
-    padding-top: 70px;
-    .benner_headding{
-      max-width: 740px;
-      font-size: 64px;
-      font-weight: 900;
-      line-height: 86px;
-      color:#FFFFFF ;
-      text-align: center;
-    }
-    .phead{
-      
-      color: #1DD100;
-    }
-    .benner_info{
-      max-width: 690px;
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 30px;
-      color: #FFFFFF;
-      text-align: center;
-    }
-    .buyBtn{
+  .phead{
+    
+    color: #1DD100;
+  }
+  .benner_info{
+    width: 343px;
+    color: #FFFFFF;
+    text-align: center;
+  }
+  .buyBtn{
+    @include btn(#030712,#1DD100 ,none ,700 )
+  }
+} 
+#offer{
+  margin-bottom: 50px;
+  .offer_title{
+     margin: 0 auto;
+     font-size: 30px;
+     font-weight: 700;
+  }  
+  .offer_box{
       margin-top: 30px;
-      @include btn(#030712,#1DD100 ,none ,700 )
-    }
   }
-  .user_box{
+  .offer_card{
+    max-width: 574px;
+    background-color: #FFBF0F;
+    height: 220px;
+    border-radius: 24px;
+    
+  } 
+  .offer_praimary{
+    padding: 52px;
+  }
+  .offer_scendary{
+    padding: 66px 42px;
+  }
+  .card_active{
+    background-color: #F78C9C;
+  }
+}
+.btn_c{
+  border: 2px solid #1DD100;
+  color: #1DD100;
+  padding: 21px 30px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 12px;
+  margin: 100px auto !important;
+}
 
-    .user_cardBox{
-
-      .user_card{
-        padding: 32px;
-        .user_img{
-          max-width: 64px;
-          max-height: 64px;
-        }
+#ticket{
+  margin-top: 120px;
+  border-top: 2px solid #1DD100;
+  background-color: white;
+}
+@media (max-width: 1370px) and (min-width: 992px) {
+  #benner{
+    margin-bottom: 100px;
+   position: relative;
+    .benner_text{
+      padding-top: 70px;
+      .benner_headding{
+        max-width: 740px;
+        font-size: 64px;
+        font-weight: 900;
+        line-height: 86px;
+        color:#FFFFFF ;
+        text-align: center;
+      }
+      .phead{
         
-
-
+        color: #1DD100;
+      }
+      .benner_info{
+        max-width: 690px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+        color: #FFFFFF;
+        text-align: center;
+      }
+      .buyBtn{
+        margin-top: 30px;
+        @include btn(#030712,#1DD100 ,none ,700 )
+      }
+    }
+    .user_box{
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -10%;
+      .user_cardBox{
+  
+        .user_card{
+          width: 308px;
+          background-color: #FFFFFF;
+          max-height: 140px;
+          padding: 32px;
+          border-radius: 24px;
+          border-bottom: 3px solid #1DD100;
+          .user_img{
+            max-width: 64px;
+            max-height: 64px;
+            margin-right: 10px;
+          }
+          
+  
+  
+        }
       }
     }
   }
+  .user_info{
+    .card_Num{
+      font-family: "Inter", sans-serif !important;
+      font-size: 36px;
+      font-weight: 700;
+      color: #030712;
+    }
+
+   
+  }
+  #offer{
+    padding-top: 70px;
+    display: block;
+    .offer_title{
+       margin: 0 auto;
+       font-size: 40px;
+       font-weight: 700;
+       text-align: center;
+    }   
+  }
 }
-.user_info{
-  .card_Num{
-    font-family: "Inter", sans-serif !important;
-    font-size: 36px;
-    font-weight: 700;
-    color: #030712;
-  }
-  .user_title{
-    
-  }
+@media (max-width: 576px) and (min-width: 300px){
+    #benner{
+      position: static;
+    }
+    .benner_headding{
+      width: 400px !important;
+      font-size: 36px;
+    }
+    .benner_info{
+      width: 350px;
+      font-size: 16px;
+    }
+    .user_box{
+      margin-top: 20px;
+      position: static;
+      display: block;
+      margin: 0 auto;
+
+    }
+    #offer{
+      .card_active{
+        background-color: #F78C9C;
+        margin-top: 30px;
+      }
+    }
 }
